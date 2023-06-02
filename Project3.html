@@ -6,29 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Hub</title>
     <link rel="stylesheet" href="Project3.css">
+    <link rel="stylesheet" media="screen and (max-width:1240px)" href="./Responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- bootstrap css and js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" media="screen and (max-width:1240px)" href="Phone.css">
 </head>
 <body>
+    <div id="loading"></div>
+
     <section id="home-section">
-        <nav id="navbar">
-            <div id="div-of-logo-nav">
-                <img src="./Images/logo.png" alt="">
-                <h1>Gym Hub</h1>
+        <nav class="navbar navbar-expand-lg bg-dark" style="background-color: #000000ad!important;">
+            <div class="container-fluid">
+                <div id="div-of-logo-nav">
+                    <img src="./Images/logo.png" alt="">
+                    <h1>Gym Hub</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: 3px solid white;">
+                    <i class="fa-solid fa-bars" style="color: white;"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div id="div-of-searchBar-nav">
+                            <button onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button><i class="fa-solid fa-heart"></i></button>
+                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                        
+                        <li class="nav-item" id="div-for-anchor-nav">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item" id="div-for-anchor-nav">
+                            <a class="nav-link active" aria-current="page" href="#facilities-section">Facilities</a>
+                        </li>
+                        <li class="nav-item" id="div-for-anchor-nav">
+                            <a class="nav-link active" aria-current="page" href="#about-us-section">About Us</a>
+                        </li>
+                        <li class="nav-item" id="div-for-anchor-nav">
+                            <a class="nav-link active" aria-current="page" href="#contact-us-section">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="search-icon-hidden-div">
+                    <button id="cross-button-of-search-icon" onclick="closeSearch()"><i class="fa-solid fa-xmark"></i></button>
+                    <div>
+                        <input type="text" placeholder="Search Here...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
             </div>
-    
-            <div id="div-for-anchor-nav">
-                <a href="#home">Home</a>
-                <a href="#facilities-section">Facilities</a>
-                <a href="#about-us-section">About Us</a>
-                <a href="#contact-us-section">Contact Us</a>
-            </div>
-    
-            <div id="div-of-searchBar-nav">
-                <input type="text" id="search" placeholder="Search This Website">
-                <label for="search"><img src="./Images/search.png" alt=""></label>
-            </div>
-        </nav>
+          </nav>
 
         <button id="back-to-top-btn"><a href="#home-section">Back To Top</a></button>
 
@@ -43,36 +75,36 @@
     <section id="workout-section">
         <div class="box">
             <img src="./Images/body building.png" alt="">
-            <h1>BODY BUILDING</h1>
+            <h1 style="font-size: 30px; font-weight: bold;">BODY BUILDING</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, numquam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aut tenetur! Maiores iste esse delectus autem architecto. Ullam accusamus explicabo molestiae veritatis inventore! Harum blanditiis doloremque autem maxime molestiae impedit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, magnam illum deserunt ipsam dignissimos quidem quis tempore dolor fugiat eaque ab optio reiciendis explicabo amet, accusantium provident repellat quaerat recusandae!</p>
         </div>
 
         <div class="box">
             <img src="./Images/cardio.jpg" alt="">
-            <h1>CARDIO</h1>
+            <h1 style="font-size: 30px; font-weight: bold;">CARDIO</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, numquam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aut tenetur! Maiores iste esse delectus autem architecto. Ullam accusamus explicabo molestiae veritatis inventore! Harum blanditiis doloremque autem maxime molestiae impedit.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dignissimos quaerat, possimus id accusantium dolor distinctio qui odio consequatur enim velit tempore! Rem repudiandae consequatur autem! Provident cum numquam molestiae.</p>
         </div>
 
         <div class="box">
             <img src="./Images/yoga.png" alt="">
-            <h1>YOGA FITNESS</h1>
+            <h1 style="font-size: 30px; font-weight: bold;">YOGA FITNESS</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, numquam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aut tenetur! Maiores iste esse delectus autem architecto. Ullam accusamus explicabo molestiae veritatis inventore! Harum blanditiis doloremque autem maxime molestiae impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptate ut est vero aliquid. Id nihil incidunt quod omnis odit voluptate repellendus nisi sint itaque? Voluptatibus repellat quasi nostrum commodi.</p>
         </div>
 
         <div class="box">
             <img src="./Images/weight loss.jpg" alt="">
-            <h1>WEIGHT LOSS</h1>
+            <h1 style="font-size: 30px; font-weight: bold;">WEIGHT LOSS</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, numquam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aut tenetur! Maiores iste esse delectus autem architecto. Ullam accusamus explicabo molestiae veritatis inventore! Harum blanditiis doloremque autem maxime molestiae impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cupiditate laudantium quidem quo, fugit sunt quos obcaecati labore repellat laboriosam dolore officia porro earum sint ut? Facere voluptatum totam quaerat.</p>
         </div>
 
         <div class="box">
             <img src="./Images/powerlifting.jpg" alt="">
-            <h1>POWER LIFTING</h1>
+            <h1 style="font-size: 30px; font-weight: bold;">POWER LIFTING</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, numquam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aut tenetur! Maiores iste esse delectus autem architecto. Ullam accusamus explicabo molestiae veritatis inventore! Harum blanditiis doloremque autem maxime molestiae impedit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque molestias exercitationem at. Sint consequatur, vero voluptatum unde eligendi excepturi sit reprehenderit quod natus voluptatibus atque voluptates ad eos. Voluptate, beatae!</p>
         </div>
         <div class="box">
             <img src="./Images/aerobics.jpg" alt="">
-            <h1>AEROBICS</h1>
+            <h1 style="font-size: 30px; font-weight: bold;">AEROBICS</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, numquam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aut tenetur! Maiores iste esse delectus autem architecto. Ullam accusamus explicabo molestiae veritatis inventore! Harum blanditiis doloremque autem maxime molestiae impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facere porro temporibus alias. Temporibus eos accusantium ratione repellendus cum voluptatem perferendis! Error quibusdam itaque animi perspiciatis placeat doloremque, sapiente ipsa?</p>
         </div>
     </section>
@@ -80,34 +112,36 @@
     <section id="facilities-section">
         <h1 id="facilities-section-main-heading">OUR FACILITIES</h1>
 
-        <div class="div-of-facilities-section">
-            <h1>MODERN EQUIPMENT</h1>
-            <img src="./Images/equipment.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, consequatur exercitationem et pariatur non quaerat inventore sit sint rem necessitatibus beatae facilis quae suscipit architecto expedita, soluta animi aspernatur? Illum dolor tempora non fugit cupiditate consectetur incidunt aliquid deleniti dicta, neque vel architecto sit delectus voluptate sint eos unde officiis error natus in quia! Explicabo facere temporibus vitae id! Voluptatem sequi voluptas laudantium architecto, quos velit repellendus eveniet nobis deleniti. Ex nemo sit ducimus laborum rerum voluptatem est pariatur excepturi exercitationem dolore sequi consequatur in quibusdam, necessitatibus nostrum perferendis vero ullam, repellat voluptas dolorum? Consectetur iure aperiam facere quod, repudiandae beatae! Magni nisi tenetur perferendis. Cupiditate quos ipsam at voluptatum doloremque. Animi omnis totam, nam rerum modi fugiat neque, repellendus voluptas maxime commodi porro eum itaque est nisi repudiandae tempore deserunt numquam quos, consequuntur vero similique quo. In fugit labore ducimus consequatur excepturi ratione, neque a earum, velit quod expedita, deleniti tempora! Molestias, omnis. Odio harum quaerat cupiditate quisquam sequi quam, iste soluta recusandae, at reiciendis commodi molestias officiis doloremque optio aliquam minima. Molestias eveniet dolorum repellat soluta quos accusantium suscipit nisi, quas laboriosam quasi nobis, quisquam quam quis ducimus aperiam ab explicabo eius, vel necessitatibus rerum non culpa maxime.</p>
-        </div>
-
-        <div class="div-of-facilities-section">
-            <h1>PROFESSIONAL TRAINERS</h1>
-            <img src="./Images/trainers.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, consequatur exercitationem et pariatur non quaerat inventore sit sint rem necessitatibus beatae facilis quae suscipit architecto expedita, soluta animi aspernatur? Illum dolor tempora non fugit cupiditate consectetur incidunt aliquid deleniti dicta, neque vel architecto sit delectus voluptate sint eos unde officiis error natus in quia! Explicabo facere temporibus vitae id! Voluptatem sequi voluptas laudantium architecto, quos velit repellendus eveniet nobis deleniti. Ex nemo sit ducimus laborum rerum voluptatem est pariatur excepturi exercitationem dolore sequi consequatur in quibusdam, necessitatibus nostrum perferendis vero ullam, repellat voluptas dolorum? Consectetur iure aperiam facere quod, repudiandae beatae! Magni nisi tenetur perferendis. Cupiditate quos ipsam at voluptatum doloremque. Animi omnis totam, nam rerum modi fugiat neque, repellendus voluptas maxime commodi porro eum itaque est nisi repudiandae tempore deserunt numquam quos, consequuntur vero similique quo. In fugit labore ducimus consequatur excepturi ratione, neque a earum, velit quod expedita, deleniti tempora! Molestias, omnis. Odio harum quaerat cupiditate quisquam sequi quam, iste soluta recusandae, at reiciendis commodi molestias officiis doloremque optio aliquam minima. Molestias eveniet dolorum repellat soluta quos accusantium suscipit nisi, quas laboriosam quasi nobis, quisquam quam quis ducimus aperiam ab explicabo eius, vel necessitatibus rerum non culpa maxime.</p>
-        </div>
-
-        <div class="div-of-facilities-section">
-            <h1>DIET PLAN</h1>
-            <img src="./Images/diet plan.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, consequatur exercitationem et pariatur non quaerat inventore sit sint rem necessitatibus beatae facilis quae suscipit architecto expedita, soluta animi aspernatur? Illum dolor tempora non fugit cupiditate consectetur incidunt aliquid deleniti dicta, neque vel architecto sit delectus voluptate sint eos unde officiis error natus in quia! Explicabo facere temporibus vitae id! Voluptatem sequi voluptas laudantium architecto, quos velit repellendus eveniet nobis deleniti. Ex nemo sit ducimus laborum rerum voluptatem est pariatur excepturi exercitationem dolore sequi consequatur in quibusdam, necessitatibus nostrum perferendis vero ullam, repellat voluptas dolorum? Consectetur iure aperiam facere quod, repudiandae beatae! Magni nisi tenetur perferendis. Cupiditate quos ipsam at voluptatum doloremque. Animi omnis totam, nam rerum modi fugiat neque, repellendus voluptas maxime commodi porro eum itaque est nisi repudiandae tempore deserunt numquam quos, consequuntur vero similique quo. In fugit labore ducimus consequatur excepturi ratione, neque a earum, velit quod expedita, deleniti tempora! Molestias, omnis. Odio harum quaerat cupiditate quisquam sequi quam, iste soluta recusandae, at reiciendis commodi molestias officiis doloremque optio aliquam minima. Molestias eveniet dolorum repellat soluta quos accusantium suscipit nisi, quas laboriosam quasi nobis, quisquam quam quis ducimus aperiam ab explicabo eius, vel necessitatibus rerum non culpa maxime.</p>
+        <div class="facilities-section-container-div">
+            <div class="div-of-facilities-section">
+                <h1>MODERN EQUIPMENT</h1>
+                <img src="./Images/equipment.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa praesentium odit quibusdam neque! Eveniet harum consequatur accusamus error reprehenderit dolorum voluptatibus eaque vitae quidem tenetur quisquam exercitationem unde, porro recusandae deserunt, suscipit animi qui facere explicabo perspiciatis nam quos dolor aliquid aliquam! Possimus quod maiores est cum porro unde maxime pariatur reiciendis mollitia repellendus velit enim magnam nesciunt nemo, fugiat voluptas debitis quae molestias commodi, sit molestiae. Earum delectus obcaecati dolorum quidem at? Maiores blanditiis porro inventore distinctio a ratione. Doloribus iure, excepturi enim similique voluptates, nesciunt aut, esse possimus eveniet dicta cupiditate aliquam quas. Obcaecati minus laudantium soluta animi.</p>
+            </div>
+    
+            <div class="div-of-facilities-section">
+                <h1>PROFESSIONAL TRAINERS</h1>
+                <img src="./Images/trainers.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa praesentium odit quibusdam neque! Eveniet harum consequatur accusamus error reprehenderit dolorum voluptatibus eaque vitae quidem tenetur quisquam exercitationem unde, porro recusandae deserunt, suscipit animi qui facere explicabo perspiciatis nam quos dolor aliquid aliquam! Possimus quod maiores est cum porro unde maxime pariatur reiciendis mollitia repellendus velit enim magnam nesciunt nemo, fugiat voluptas debitis quae molestias commodi, sit molestiae. Earum delectus obcaecati dolorum quidem at? Maiores blanditiis porro inventore distinctio a ratione. Doloribus iure, excepturi enim similique voluptates, nesciunt aut, esse possimus eveniet dicta cupiditate aliquam quas. Obcaecati minus laudantium soluta animi.</p>
+            </div>
+    
+            <div class="div-of-facilities-section">
+                <h1>DIET PLAN</h1>
+                <img src="./Images/diet plan.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa praesentium odit quibusdam neque! Eveniet harum consequatur accusamus error reprehenderit dolorum voluptatibus eaque vitae quidem tenetur quisquam exercitationem unde, porro recusandae deserunt, suscipit animi qui facere explicabo perspiciatis nam quos dolor aliquid aliquam! Possimus quod maiores est cum porro unde maxime pariatur reiciendis mollitia repellendus velit enim magnam nesciunt nemo, fugiat voluptas debitis quae molestias commodi, sit molestiae. Earum delectus obcaecati dolorum quidem at? Maiores blanditiis porro inventore distinctio a ratione. Doloribus iure, excepturi enim similique voluptates, nesciunt aut, esse possimus eveniet dicta cupiditate aliquam quas. Obcaecati minus laudantium soluta animi.</p>
+            </div>
         </div>
     </section>
 
     <section id="join-now-section">
         <h1 id="main-heading-join-now-section">JOIN OUR GYM</h1>
-        <form action="noaction.php">
+        <form>
             <h1>START YOUR HEALTHY LIFE TODAY</h1>
             <label for="name">Name: </label>
             <input type="text" id="name" placeholder="Enter Your Name">
 
             <label for="email">Email Address: </label>
-            <input type="email" id="email" placeholder="Enter Your Email Address">
+            <input type="email" id="emailAddress" placeholder="Enter Your Email Address">
             
             <label for="gender">Gender: </label>
             <input type="text" id="gender" placeholder="Enter Your Gender">
@@ -121,7 +155,9 @@
             <label for="phone">Phone Number: </label>
             <input type="number" id="phone" placeholder="Enter Your Phone Number">
 
-            <input type="submit" value="SUBMIT AND JOIN NOW" id="submit-btn">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button type="button" id="submit-btn" onclick="joinNow()">JOIN NOW</button>
+            </div>
         </form>
     </section>
 
@@ -130,22 +166,24 @@
         <h1>ABOUT US</h1>
         <div>
             <img src="./Images/about us.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, rerum nulla assumenda itaque consequuntur pariatur aperiam officia, tempore minima dicta accusantium sunt non necessitatibus. Perspiciatis eius ex, odit optio incidunt expedita pariatur suscipit eos error adipisci ipsam sint voluptatum ea possimus culpa iusto earum ipsa similique nobis sequi voluptates! Praesentium possimus aliquid mollitia eligendi, nesciunt similique qui obcaecati minima quasi, beatae enim tenetur veritatis expedita hic labore amet optio voluptatibus deleniti commodi consequatur quidem, numquam ex. Quod distinctio culpa animi repellat totam ipsam placeat officiis odit, tenetur voluptate nostrum ratione temporibus expedita architecto aperiam? Accusantium error quibusdam voluptatum vero soluta blanditiis recusandae eaque asperiores adipisci suscipit minima, illum, iste veritatis, quas incidunt. Consectetur doloremque, quae nulla qui deserunt accusamus quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati dignissimos libero. Provident commodi expedita quos, harum assumenda animi porro asperiores iste corrupti incidunt beatae. Quas amet doloribus alias, voluptate voluptatibus qui eum dignissimos unde dolor ea accusamus est officia neque libero, eius sit! Optio, nobis? Natus, repudiandae mollitia. Quaerat asperiores dicta veniam nesciunt praesentium eligendi. Ea veniam laboriosam vero fugiat sapiente voluptatem non magni, dicta, dignissimos illo maiores aut doloremque. Sapiente modi, rem iure ut aut consequuntur? Excepturi esse libero consequatur nulla debitis modi culpa nemo ducimus dignissimos itaque. Explicabo voluptates, voluptas placeat iure molestiae aut quos omnis sint? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente at eius cupiditate aut. Similique rerum illo temporibus dolore exercitationem ipsa voluptates aliquid soluta cum quisquam repellendus laboriosam minus vitae recusandae praesentium est deserunt molestiae itaque, ipsam optio maiores animi sint tempore? Eos perspiciatis odit impedit reprehenderit temporibus. Aut, laborum dolores? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, ipsa accusantium? Vitae repellendus facere qui repellat at quae impedit et harum minus numquam odit laboriosam asperiores minima, quidem iure fugit. Dolor, quia tenetur! Aliquam non vel consequuntur fugit corporis provident doloremque, vero ab eaque ipsam labore repellendus corrupti molestiae animi vitae ex ullam enim quis dolore sed veniam recusandae. Aperiam amet nostrum tempore voluptatibus. Est quisquam amet hic iure. Praesentium fuga eveniet reiciendis nam, saepe et sequi nihil distinctio doloribus, sed sint eaque. Recusandae eius odio consectetur, quia minima excepturi nesciunt, iure, expedita facilis in maiores obcaecati saepe quod qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nulla adipisci tenetur repudiandae in sunt nemo cum assumenda minus impedit et, officia quisquam nihil optio? Natus rerum placeat vitae, at, non neque numquam maxime deleniti suscipit eius aliquid porro quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio explicabo impedit provident! Consequatur, commodi? Voluptate ex omnis provident odit asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quo repellat temporibus, ipsum nostrum laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quos?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, rerum nulla assumenda itaque consequuntur pariatur aperiam officia, tempore minima dicta accusantium sunt non necessitatibus. Perspiciatis eius ex, odit optio incidunt expedita pariatur suscipit eos error adipisci ipsam sint voluptatum ea possimus culpa iusto earum ipsa similique nobis sequi voluptates! Praesentium possimus aliquid mollitia eligendi, nesciunt similique qui obcaecati minima quasi, beatae enim tenetur veritatis expedita hic labore amet optio voluptatibus deleniti commodi consequatur quidem, numquam ex. Quod distinctio culpa animi repellat totam ipsam placeat officiis odit, tenetur voluptate nostrum ratione temporibus expedita architecto aperiam? Accusantium error quibusdam voluptatum vero soluta blanditiis recusandae eaque asperiores adipisci suscipit minima, illum, iste veritatis, quas incidunt. Consectetur doloremque, quae nulla qui deserunt accusamus quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati dignissimos libero. Provident commodi expedita quos, harum assumenda animi porro asperiores iste corrupti incidunt beatae. Quas amet doloribus alias, voluptate voluptatibus qui eum dignissimos unde dolor ea accusamus est officia neque libero, eius sit! Optio, nobis? Natus, repudiandae mollitia. Quaerat asperiores dicta veniam nesciunt praesentium eligendi. Ea veniam laboriosam vero fugiat sapiente voluptatem non magni, dicta, dignissimos illo maiores aut doloremque. Sapiente modi, rem iure ut aut consequuntur? Excepturi esse libero consequatur nulla debitis modi culpa nemo ducimus dignissimos itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum reprehenderit, ullam ea minima fugit! Quia, minima velit maiores eum modi laborum nemo aperiam laudantium excepturi dicta eaque totam molestiae, error enim commodi voluptatum, tenetur omnis necessitatibus tempora sequi facere doloremque cumque. Perspiciatis perferendis deleniti nostrum fugit voluptatem et nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam exercitationem, animi illo a culpa repellendus alias velit quaerat officia praesentium soluta eveniet odit saepe in. Harum, nesciunt. Ab laboriosam earum velit neque temporibus, distinctio suscipit quidem optio aspernatur esse ut qui nemo inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
     </section>
 
     <section id="contact-us-section">
-        <h2>HAVE SOME QUESTIONS?</h2>
+        <h2 style="padding-top: 12px;">HAVE SOME QUESTIONS?</h2>
         <h1>CONTACT US</h1>
-        <form action="noaction.php">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="Enter Your Email">
-            <textarea id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
-            <input type="submit" value="Send Message" id="send-message-btn">
+        <form>
+            <input type="text" id="fname" placeholder="First Name">
+            <input type="text" id="lname" placeholder="Last Name">
+            <input type="email" id="email-address" placeholder="Email Address">
+            <textarea id="message" cols="30" rows="10" placeholder="Enter Your Message" style="resize: none;"></textarea>
+            <button onclick="sendMessage()" type="button" id="send-message-btn">Send Message</button>
         </form>
     </section>
 
     <footer>Copyright &copy; &nbsp; www.GymHub.com &nbsp; All Rights Reserved!</footer>
+
+    <script src="./Project3.js"></script>
 </body>
 </html>
